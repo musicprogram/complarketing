@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campaignName: MyString
+  campaignCode: MyString
+  status: false
+
+two:
+  campaignName: MyString
+  campaignCode: MyString
+  status: false

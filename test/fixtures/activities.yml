@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameActivity: MyString
+  typeActivity: MyString
+  note: MyText
+  dateActivity: 2014-10-11 15:59:09
+  endDateActivity: 2014-10-11 15:59:09
+  totalTimeActivity: 1
+
+two:
+  nameActivity: MyString
+  typeActivity: MyString
+  note: MyText
+  dateActivity: 2014-10-11 15:59:09
+  endDateActivity: 2014-10-11 15:59:09
+  totalTimeActivity: 1

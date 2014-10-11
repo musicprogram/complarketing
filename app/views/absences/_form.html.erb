@@ -1,0 +1,59 @@
+<%= form_for @absence, :html => { :class => "form-horizontal absence" } do |f| %>
+
+    <% if @absence.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@absence.errors.count, "error") %> prohibited this absence from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @absence.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :absenceType, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :absenceType, :class => 'form-control' %>
+    </div>
+    <%= error_span(@absence[:absenceType]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :permision, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :permision, :class => 'form-control' %>
+    </div>
+    <%= error_span(@absence[:permision]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :startTime, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :startTime, :class => 'form-control' %>
+    </div>
+    <%= error_span(@absence[:startTime]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :endTime, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :endTime, :class => 'form-control' %>
+    </div>
+    <%= error_span(@absence[:endTime]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :total, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :total, :class => 'form-control' %>
+    </div>
+    <%= error_span(@absence[:total]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            absences_path, :class => 'btn btn-default' %>
+
+<% end %>

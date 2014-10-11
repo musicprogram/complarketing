@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  absenceType: MyString
+  permision: false
+  startTime: 2014-10-11 15:47:38
+  endTime: 2014-10-11 15:47:38
+  total: 1
+
+two:
+  absenceType: MyString
+  permision: false
+  startTime: 2014-10-11 15:47:38
+  endTime: 2014-10-11 15:47:38
+  total: 1

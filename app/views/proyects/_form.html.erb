@@ -1,0 +1,94 @@
+<%= form_for @proyect, :html => { :class => "form-horizontal proyect" } do |f| %>
+
+    <% if @proyect.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@proyect.errors.count, "error") %> prohibited this proyect from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @proyect.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :campaignName_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :campaignName_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:campaignName_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :brandName_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :brandName_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:brandName_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :country_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :country_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:country_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nameEmployee_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nameEmployee_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:nameEmployee_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nameActivity_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nameActivity_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:nameActivity_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :typeActivity_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :typeActivity_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:typeActivity_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :note_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :note_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:note_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :dateActivity_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :dateActivity_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:dateActivity_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :endDateActivity_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :endDateActivity_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:endDateActivity_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :totalActivity_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :totalActivity_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@proyect[:totalActivity_id]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            proyects_path, :class => 'btn btn-default' %>
+
+<% end %>
